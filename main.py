@@ -1,16 +1,30 @@
-# This is a sample Python script.
+# want to take in file line by line
+# make tuples from these lines
+# process each tuple elements
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def process_line(line):
+    translation_table = dict.fromkeys(map(ord, '/ '), None)
+    line = line.split()
+    line = tuple((line[0], line[1].translate(translation_table)))
+    return line
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def format_file(input_file):
+    data = []
+    lines = input_file.readlines()
+    for line in lines:
+        if line[0] != "\'":
+            tuple_line = process_line(line)
+            data.append(tuple_line)
+        else:
+            tuple_line = None
 
+    return data
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    file = open('IPA Data/en_US.txt', 'r', encoding='utf8')
+    data = format_file(file)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(data[7])
+
+    file.close()
