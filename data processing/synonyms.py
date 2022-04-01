@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('synonyms.csv')
+df = pd.read_csv('../synonyms/synonyms.csv')
 
 #cast our synonyms to strings, split synonyms
 df['synonyms'] = df['synonyms'].astype(str)

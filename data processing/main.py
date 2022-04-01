@@ -16,15 +16,13 @@ def format_file(input_file):
         if line[0] != "\'":
             tuple_line = process_line(line)
             data.append(tuple_line)
-        else:
-            tuple_line = None
 
     return data
 
 if __name__ == '__main__':
-    file = open('IPA Data/en_US.txt', 'r', encoding='utf8')
+    file = open('../IPA Data/en_US.txt', 'r', encoding='utf8')
     data = format_file(file)
 
-    print(data[7])
+    print(data)
 
     file.close()
