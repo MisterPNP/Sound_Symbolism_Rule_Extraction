@@ -19,8 +19,9 @@ def format_file(input_file):
 
     return data
 
+
 if __name__ == '__main__':
-    file = open('../IPA Data/en_US.txt', 'r', encoding='utf8')
+    file = open('../Data/IPA Data/en_US.txt', 'r', encoding='utf8')
     data = format_file(file)
 
     print(data)
