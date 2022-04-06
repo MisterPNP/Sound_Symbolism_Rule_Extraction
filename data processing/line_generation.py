@@ -47,7 +47,7 @@ def dumpIntoSet(word_set, new_words):
 
 #grab our list of synonyms
 
-inputword = 'glow'
+inputword = 'abominable'
 
 df = pd.read_csv('../Data/synonyms/synonyms.csv')
 
@@ -68,14 +68,17 @@ data_table = {}
 for entry in data:
     data_table[entry[0]] = entry[1]
 
-str = ''
+outstr = ''
 for word in syns:
     try:
         ipa = data_table[word]
-        str += """ "{}" """.format(ipa)
+        outstr += '"{}" '.format(ipa)
     except:
         print('word not found in dictionary: {}'.format(word))
 
-print(str)
+#remove last space, then surround in single quotes
+outstr = outstr[:-1]
+outstr = f"'{outstr}'"
+print(outstr)
 
 file.close()
