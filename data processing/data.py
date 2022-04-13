@@ -18,7 +18,7 @@ train_x = []
 for row in csvreader:
         train_x.append(row[1:])
 
-train_x = np.array(train_x)    
+train_x = np.array(train_x)     # x values
 
 train_y = []
 vals = [1,2,3,4,5]
@@ -26,4 +26,4 @@ count = 0
 for i in vals:
     train_y = train_y + i * [count]
     count = count + 1
-print(train_y)
+train_y = np.array(train_y) # y values
