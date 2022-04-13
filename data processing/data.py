@@ -10,7 +10,7 @@ Created on Tue Apr 12 22:44:55 2022
 import csv
 import numpy as np
 
-file = open('/Users/wanyongfeng/Desktop/training.csv')
+file = open('training.csv')
 
 csvreader = csv.reader(file)
 
