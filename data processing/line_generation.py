@@ -47,7 +47,7 @@ def dumpIntoSet(word_set, new_words):
 
 #grab our list of synonyms
 
-inputword = 'abominable'
+inputword = 'best'
 
 df = pd.read_csv('../Data/synonyms/synonyms.csv')
 
