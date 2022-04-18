@@ -71,7 +71,7 @@ def generateSynonyms(currstr, word):
 
 #grab our list of synonyms
 
-inputword = 'abominable'
+inputword = 'better'
 #inputword_list = []
 
 df = pd.read_csv('../Data/synonyms/synonyms.csv')
