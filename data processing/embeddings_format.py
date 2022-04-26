@@ -35,6 +35,7 @@ def getEmbeddedCluster(word):
     for c_id, cluster in embeddings.items():
         if(word in cluster):
             return cluster
+    return []
 
 #read json data
 f = open('../Data/Clusters/glove_clusters_10000_words.json', "r")
@@ -49,7 +50,7 @@ data_table = {}
 for entry in data:
     data_table[entry[0]] = entry[1]
 
-inputword_list = ['test']
+inputword_list = ['better', 'best', 'blue', 'broken', 'clear', 'giving', 'good', 'grand', 'heavy', 'light', 'ragged', 'sick']
 
 currstr = ''
 indextracker = []
